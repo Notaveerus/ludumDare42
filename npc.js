@@ -24,7 +24,7 @@ var npc = function(I){
 
       if(I.huntTimer >0){
         I.angle = Math.atan2((player.y-I.y),(player.x-I.x));
-        I.speed = I.baseSpeed;
+        I.speed = I.baseSpeed*1.3;
         I.huntTimer-=td;
       }
       else{
@@ -103,7 +103,7 @@ var npcType = {
     this.speed= 0.2
     this.colour= 'green'
     this.huntTimer = 4000;
-    this.itemArray = Object.keys(itemTypes);
+    this.itemArray = ['ringH','swordH','bottleH'];
     this.imgSrc = 'noble.png';
   },
   'thief': function(){
